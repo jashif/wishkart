@@ -21,6 +21,7 @@ export const query = graphql`
   }
 `
 function Hero (props) {
+  console.log(process.env)
   return (
     <div className={container}>
       <h1 className={intro}>Welcome to the GatsbyJS + Shopify Demo Store.</h1>
