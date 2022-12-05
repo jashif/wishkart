@@ -20,8 +20,15 @@ export const query = graphql`
     }
   }
 `
-function Hero (props) {
+function Hero(props) {
   console.log(process.env)
+  React.useEffect(() => {
+    const load = async () => {
+      const res = await fetch(`/api/get-products`)
+      const data = await res.json()
+    }
+    load()
+  }, [])
   return (
     <div className={container}>
       <h1 className={intro}>Welcome to the GatsbyJS + Shopify Demo Store.</h1>
